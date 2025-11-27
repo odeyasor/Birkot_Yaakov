@@ -1,0 +1,111 @@
+/* direc.css */
+
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1e3; /* Light beige background */
+    color: #2f3640; /* Dark gray text */
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Bold text for better readability */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 80px; /* Ensure enough space below the header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align main content */
+}
+
+h2 {
+    color: #e67e22; /* Bright orange for headings */
+    margin-bottom: 20px;
+}
+
+/* Form Sections */
+.form-section {
+    display: block; /* Changed to always display */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for form sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 600px; /* Centered width with max constraint */
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold labels for better emphasis */
+}
+
+.form-section input, .form-section select, .form-section button {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners for inputs and buttons */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+.form-section input:focus, .form-section select:focus {
+    border-color: #e67e22; /* Highlight border color */
+    outline: none; /* Remove default outline */
+}
+
+.form-section button {
+    background-color: #e67e22; /* Bright orange background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.form-section button:hover {
+    background-color: #d35400; /* Slightly darker orange on hover */
+}
+
+.toggle-btn {
+    background-color: #e67e22; /* Consistent button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #d35400;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: #2f3640; /* Dark gray footer */
+    color: white;
+    border-top: 1px solid #ddd; /* Light border at the top */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .form-section {
+        margin: 0 auto;
+    }
+}

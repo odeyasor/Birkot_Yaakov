@@ -1,0 +1,89 @@
+/* cart.css */
+
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1e3; /* Light beige background */
+    color: #2f3640; /* Dark gray text */
+}
+#cart-page {
+    background-color: #f9f5f0;
+}
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 80px; /* Ensure enough space below the header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align all text */
+}
+
+/* Cart Heading */
+h1 {
+    margin-bottom: 0px; /* Space below the heading */
+    color: #e67e22; /* Bright orange for heading */
+    text-align: center;
+}
+
+/* Cart Items */
+.cart-items {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the cart container */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center-align items */
+    margin-top: 8%;
+}
+
+.cart-item {
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px;
+    width: calc(33.333% - 20px); /* Three items per row with gap adjustment */
+    text-align: center;
+}
+
+.cart-item img {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-top: 10px;
+}
+
+.cart-item h2 {
+    color: #e67e22; /* Bright orange for item names */
+    margin: 10px 0;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-item {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item {
+        width: 100%; /* One item per row on very small screens */
+    }
+}

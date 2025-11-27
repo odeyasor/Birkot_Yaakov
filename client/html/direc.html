@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הנהלה</title>
+    <link rel="stylesheet" href="../css/direc.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/direc.js" defer></script>
+    <script src="../js/prod.js"></script>
+</head>
+<body dir="rtl">
+    <header>
+        <h1>פאנל הנהלה</h1>
+        <nav>
+           
+            <a href="./prod.html">מוצרים</a>
+            <a href="./loginDirec.html">הנהלה</a>
+            <a href="./home.html">התחברות</a>
+            <a href="./logout.html">יציאה</a>
+            <a href="./basket.html">הסל שלי</a>
+            <a href="../html/admin.html">  <button class="admin-btn" >מנהל ראשי</button> <!-- כפתור מנהל ראשי --></a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>ניהול משתמשים</h2>
+
+        <button class="toggle-btn" onclick="toggleSection('addUser')">הוסף משתמש</button>
+        <section id="addUser" class="form-section">
+            <form action="#" method="post">
+                <label for="newUserName">שם משתמש:</label>
+                <input type="text" id="newUserName" name="newUserName" required>
+
+                <label for="newUserPassword">סיסמה:</label>
+                <input type="password" id="newUserPassword" name="newUserPassword" required>
+
+                <label for="newUserEmail">אימייל:</label>
+                <input type="email" id="newUserEmail" name="newUserEmail" required>
+
+                <label for="newUserCity">עיר:</label>
+                <input type="text" id="newUserCity" name="newUserCity" required>
+
+                <label for="newUserStreet">רחוב:</label>
+                <input type="text" id="newUserStreet" name="newUserStreet" required>
+
+                <label for="newUserHouseNumber">מספר בית:</label>
+                <input type="text" id="newUserHouseNumber" name="newUserHouseNumber" required>
+
+                <button type="submit">הוסף משתמש</button>
+            </form>
+        </section>
+
+        <button class="toggle-btn" onclick="toggleSection('deleteUser')">מחיקת משתמש</button>
+        <section id="deleteUser" class="form-section">
+            <form action="#" method="post">
+                <label for="deleteUserEmail">אימייל למחיקה:</label>
+                <input type="email" id="deleteUserEmail" name="deleteUserEmail" required>
+                <button type="submit">מחק משתמש</button>
+            </form>
+        </section>
+
+        <h2>ניהול מוצרים</h2>
+
+        <button class="toggle-btn" onclick="toggleSection('addProduct')">הוסף מוצר</button>
+        <section id="addProduct" class="form-section">
+            <form id="productForm" action="/addProdToDB" method="post" enctype="multipart/form-data">
+                <label for="newProductName">שם מוצר:</label>
+                <input type="text" id="newProductName" name="prodName" required>
+        
+                <label for="newProductId">מזהה מוצר:</label>
+                <input type="text" id="newProductId" name="prodId" required>
+        
+                <label for="newProductPrice">מחיר:</label>
+                <input type="number" id="newProductPrice" name="price" step="0.01" required>
+        
+                <label for="newProductQuantity">כמות:</label>
+                <input type="number" id="newProductQuantity" name="available" required>
+        
+                <label for="newProductAvailable">האם זמין:</label>
+                <select id="newProductAvailable" name="thisWeek" required>
+                    <option value="yes">כן</option>
+                    <option value="no">לא</option>
+                </select>
+        
+                <label for="newProductImage">בחר תמונה:</label>
+                <input type="file" id="newProductImage" name="image" accept="image/*" required>
+        
+                <button type="submit">הוסף מוצר</button>
+            </form>
+        </section>
+        
+
+        <button class="toggle-btn" onclick="toggleSection('updateProduct')">עדכן מוצר</button>
+        <section id="updateProduct" class="form-section">
+            <form action="#" method="post">
+                <label for="ProductName">שם מוצר לעדכון:</label>
+                <input type="text" id="ProductName" name="updateProductName">
+
+                <label for="updateProductName">שם מוצר חדש:</label>
+                <input type="text" id="updateProductName" name="updateProductName">
+
+                <label for="updateProductPrice">מחיר חדש:</label>
+                <input type="number" id="updateProductPrice" name="updateProductPrice" step="0.01">
+
+                <label for="updateProductQuantity">כמות חדשה:</label>
+                <input type="number" id="updateProductQuantity" name="updateProductQuantity">
+
+                <label for="updateProductAvailable">האם זמין חדש:</label>
+                <select id="updateProductAvailable" name="updateProductAvailable">
+                    <option value="true">כן</option>
+                    <option value="false">לא</option>
+                </select>
+                
+                <button type="button" onclick="updateProduct()">עדכן מוצר</button>
+            </form>
+        </section>
+
+        <button class="toggle-btn" onclick="toggleSection('deleteProduct')">מחיקת מוצר</button>
+        <section id="deleteProduct" class="form-section">
+            <form action="#" method="post">
+                <label for="deleteProductId">שם מוצר למחיקה</label>
+                <input type="text" id="deleteProductName" name="deleteProductName" required>
+                <button type="button" onclick="deleteProd()">מחק מוצר</button>
+            </form>
+        </section>
+
+        <h2>ניהול הזמנות</h2>
+        <button class="toggle-btn" onclick="getOrders()">הצג הזמנות</button>
+        <div id="ordersDisplay"></div>
+
+    </main>
+
+    <footer>
+        <p>&copy; שולמית ואודיה</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>

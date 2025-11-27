@@ -1,0 +1,88 @@
+/* הגדרות בסיסיות לדף */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.one_order{
+    margin-top: 6%;
+}
+/* עיצוב התוכן העיקרי */
+main {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* עיצוב כותרות משניות */
+h2, h3 {
+    color: #333;
+}
+
+/* עיצוב כפתורים */
+.toggle-btn {
+    background-color: #ff6600; /* כתום */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.toggle-btn:hover {
+    background-color: #e65c00; /* כתום כהה להנחתה */
+}
+
+/* עיצוב טפסים */
+.form-section {
+    display: none; /* ברירת מחדל, סגור */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+form input[type="url"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff6600; /* כתום */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #e65c00; /* כתום כהה להנחתה */
+}

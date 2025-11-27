@@ -1,0 +1,82 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#logo-login{
+    margin-top: -4%;
+    width: 24%;
+}
+h1, h2 {
+    color: #FFA500; /* צבע כתום */
+    animation: fadeIn 2s ease-in-out;
+}
+
+form {
+    background-color: #eee;
+    padding: 40px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: slideIn 1s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+input {
+    padding: 10px;
+    width: calc(100% - 22px);
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFA500; /* צבע כתום */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #e69500;
+}
+
+@keyframes grow {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+@keyframes spinAndResize {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+}

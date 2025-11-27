@@ -1,0 +1,87 @@
+/* admin.css */
+.container {
+    margin-top: 100px; /* כדי להימנע מחפיפה עם הכותרת הקבועה */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-btn {
+    width: 200px;
+    background-color: #ffcc80; /* כתום כהה יותר */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+    background-color: #ffa726; /* כתום כהה */
+}
+
+/* סגנון כללי לטבלה */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* סגנון לכותרות של הטבלה */
+th {
+    background-color: #ffa726;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* סגנון לתאים של הטבלה */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* סגנון לשורות הזוגיות */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* סגנון לשורות לא זוגיות */
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* סגנון לכותרת הטבלה */
+thead {
+    background-color: #f2f2f2;
+}
+
+/* סגנון לסגנון חלון התצוגה כאשר אין מנהלים */
+p {
+    font-family: Arial, sans-serif;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* עיצוב הטבלה במובייל */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}

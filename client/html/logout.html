@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Logout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .logout-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #ff6666;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<header>
+    <img src="../img/logo.png" id="logo">
+    <h1>ברכות יעקב</h1>
+    <nav>
+       
+        <a href="./prod.html">מוצרים</a>
+        <a href="./loginDirec.html">הנהלה</a>
+        <a href="./home.html">התחברות</a>
+        <a href="./logout.html">יציאה</a>
+        <a href="./basket.html">הסל שלי</a>
+    </nav>
+</header>
+<body dir="rtl">
+
+    <div class="logout-container">
+        <p>האם אתה בטוח רוצה להתנתק?</p>
+        <button class="logout-button" id="confirmLogout" onclick="clearSessionStorage()">אישור</button>
+    </div>
+
+    <script src="../js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* pay.css */
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 100px auto; /* כדי להימנע מחפיפה עם הכותרת הקבועה */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info {
+    background-color: #ffebcd; /* כתום בהיר */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.payment-details {
+    background-color: #ffcc80; /* כתום כהה יותר */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

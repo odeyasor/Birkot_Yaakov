@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול מנהלים</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/direc.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<style>
+    body{margin-top: 15%;}
+</style>
+<body dir="rtl">
+    <header>
+        <h1>פאנל ניהול מנהלים</h1>
+        <nav>
+            <a href="./home.html">דף הבית</a>
+            <a href="./logout.html">יציאה</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="sidebar">
+            <button class="toggle-btn" onclick="toggleSection('addDirector')">הוסף מנהל</button>
+            <button class="toggle-btn" onclick="toggleSection('deleteDirector')">מחק מנהל</button>
+            <button class="toggle-btn" onclick="toggleSection('viewDirectors')">הצג את כל המנהלים</button>
+            <button class="toggle-btn" onclick="toggleSection('searchDirector')">חפש מנהל לפי שם</button>
+        </div>
+
+        <div class="content">
+            <section id="addDirector" class="form-section">
+                <form id="addManagerForm">
+                    <label for="addDirecName">שם משתמש:</label>
+                    <input type="text" id="addDirecName" name="direcName" required>
+
+                    <label for="addFullName">שם מלא:</label>
+                    <input type="text" id="addFullName" name="fullName" required>
+
+                    <label for="addEmail">אימייל:</label>
+                    <input type="email" id="addEmail" name="email" required>
+
+                    <label for="addDirecPwd">סיסמת מנהל:</label>
+                    <input type="password" id="addDirecPwd" name="direcPwd" required>
+
+                    <label for="addPrivatePwd">סיסמה פרטית:</label>
+                    <input type="password" id="addPrivatePwd" name="privatePwd" required>
+
+                    <button type="submit">הוסף מנהל</button>
+                </form>
+            </section>
+
+            <section id="deleteDirector" class="form-section">
+                <form id="deleteManagerForm">
+                    <label for="deleteDirecName">שם המנהל למחיקה:</label>
+                    <input type="text" id="deleteDirecName" name="direcName" required>
+
+                    <button type="submit">מחק מנהל</button>
+                </form>
+            </section>
+
+            <section id="viewDirectors" class="form-section">
+                <div id="directorsList">
+                    <!-- התוצאות יוצגו כאן -->
+                </div>
+            </section>
+
+            <section id="searchDirector" class="form-section">
+                <form id="searchManagerForm">
+                    <label for="searchDirecName">שם המנהל לחיפוש:</label>
+                    <input type="text" id="searchDirecName" name="searchDirecName" required>
+                    <button type="submit">חפש מנהל</button>
+                </form>
+                <div id="searchResult">
+                    <!-- התוצאות יוצגו כאן -->
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 שם האתר. כל הזכויות שמורות.</p>
+    </footer>
+</body>
+</html>

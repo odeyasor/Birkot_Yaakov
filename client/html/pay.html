@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף תשלום</title>
+    <link rel="stylesheet" href="../css/pay.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/pay.js" defer></script>
+</head>
+<style>
+    body{margin-top: 5%;}
+</style>
+<body dir="rtl" onload="calcAndUpdateBasket()">
+    <header>
+        <img src="../img/logo.png" id="logo">
+        <h1>ברכות יעקב</h1>
+        <nav>
+            <a href="./prod.html">מוצרים</a>
+            <a href="./loginDirec.html">הנהלה</a>
+            <a href="./home.html">התחברות</a>
+            <a href="./logout.html">יציאה</a>
+            <a href="./basket.html">הסל שלי</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>דף תשלום</h1>
+        
+        <h2 id="cart-header"></h2>
+        <section class="payment-info">
+            <h2>סכום לתשלום</h2>
+            <p id="money">₪</p>
+        </section>
+        
+        <section class="payment-details">
+            <h2>פרטי אשראי</h2>
+            <iframe id="payment-iframe" src="https://www.matara.pro/nedarimplus/iframe" frameborder="0" width="100%" height="305"></iframe>
+        </section>
+        
+        <button type="button" onclick="handlePayment()">בצע תשלום</button>
+    </div>
+</body>
+</html>

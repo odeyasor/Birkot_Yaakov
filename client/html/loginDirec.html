@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - מנהל</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/loginDirec.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body dir="rtl">
+    <header>
+        <h1>התחברות למנהל</h1>
+   
+        <nav>
+           
+            <a href="./prod.html">מוצרים</a>
+            <a href="./loginDirec.html">הנהלה</a>
+            <a href="./home.html">התחברות</a>
+            <a href="./logout.html">יציאה</a>
+            <a href="./basket.html">הסל שלי</a>
+        </nav>
+       
+    </header>
+    <main>
+        <section id="login">
+            <h2>כניסת מנהל</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="direcName">שם משתמש:</label>
+                    <input type="text" id="direcName" name="direcName" required>
+                </div>
+                <div class="form-group">
+                    <label for="direcPwd">סיסמת מנהל:</label>
+                    <input type="password" id="direcPwd" name="direcPwd" required>
+                </div>
+                <div class="form-group">
+                    <label for="privatePwd">סיסמת פרטית:</label>
+                    <input type="password" id="privatePwd" name="privatePwd" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">אימייל:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <a href="./direc.html"><button type="submit">התחבר</button></a>
+            </form>
+            <div id="responseMessage"></div>
+        </section>
+    </main>
+    <script src="../js/loginDirec.js"></script> <!-- או כל קובץ JS אחר שלך -->
+</body>
+</html>

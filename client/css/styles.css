@@ -1,0 +1,106 @@
+/* shared.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f5f0; /* כתום בהיר מאוד */
+    color: #333;
+    margin: 0;
+    padding-top: 80px; /* מרווח להימנע מחפיפה עם הכותרת */
+    animation: fadeIn 1s ease-in-out;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 6.8%;
+    align-items: center;
+}
+#logo{
+    margin-right: 2%;
+    position: absolute;
+    width: 22%;
+    margin-top: -4%;
+    align-items: center;
+    text-align: center;
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-color: #333; /* אפור כהה */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: 0%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff9800; /* כתום בהיר */
+    border-radius: 5px;
+    padding: 15px 20px;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+h1, h2{
+    color: #ff9800;
+}
+
+.container {
+    /*background-color: #fff;*/
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+button {
+    background-color: #ffab40; /* כתום כהה יותר */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff8a00; /* כתום כהה */
+}
+/* shared.css */
+
+   
+
+header h1 {
+    font-size: 2.5em;
+    animation: titleFadeIn 1s ease-in-out;
+}
+
+@keyframes titleFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer{
+    margin-bottom: 0%;
+    text-align: center;
+    align-items: center;
+}
+
